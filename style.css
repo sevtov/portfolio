@@ -1,0 +1,48 @@
+.preloader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  z-index: 999;
+  transition: 0.5s all;
+  opacity: 1;
+  visibility: visible;
+}
+
+.done{opacity: 0; visibility: hidden;}
+
+.loader {
+  width: 108px;
+  height: 108px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  animation: 15s spin infinite linear;
+}
+
+.loader-perc {
+  width: 108px;
+  color: white;
+  font-family: "Neue Machina", Times, serif;
+  font-weight: bold;
+  font-size: 14px;
+  text-align: center;
+  line-height: 150%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+@keyframes spin {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(-360deg);
+  }
+}
