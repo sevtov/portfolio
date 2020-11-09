@@ -1,3 +1,19 @@
+.loader {
+  width: 108px;
+  height: 108px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-family: "Neue Machina", Times, serif;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 108px;
+  text-align: center;
+  /* animation: 15s spin infinite linear; */
+}
+
 .preloader {
   position: fixed;
   left: 0;
@@ -11,9 +27,12 @@
   visibility: visible;
 }
 
-.done{opacity: 0; visibility: hidden;}
+.done {
+  opacity: 0;
+  visibility: hidden;
+}
 
-.loader {
+.loading {
   width: 108px;
   height: 108px;
   position: absolute;
@@ -22,21 +41,6 @@
   transform: translate(-50%, -50%);
   animation: 15s spin infinite linear;
 }
-
-.loader-perc {
-  width: 108px;
-  color: white;
-  font-family: "Neue Machina", Times, serif;
-  font-weight: bold;
-  font-size: 14px;
-  text-align: center;
-  line-height: 150%;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
-
 
 @keyframes spin {
   from {

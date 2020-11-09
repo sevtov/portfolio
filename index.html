@@ -1,15 +1,16 @@
 <head>
+  
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" defer></script>
+    <script src="preloader.js" defer></script>
+</head>
 
-  <link rel="stylesheet" href="style.css">
   <body>
-
+    
     <div id="page-preloader" class="preloader">
-      <img class="loader" src="loading.svg" alt="loading">
-      <span class="loader-perc">0%</span>
+      <div class="loader"><span id="load-perc">0%</span></div>
+      <img src="loading.svg" class="loading">
     </div>
 
-    <script src="preloader.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <img src="loading.svg">
   </body>
-
-</head>

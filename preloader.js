@@ -1,9 +1,9 @@
 var
   images              = document.images,
   images_total_count  = images.length,
-  images_loaded_count = 0;
-  preloader           = document.getElementById('page-preloader');
-  perc_display        = document.getElementById('loader-perc');
+  images_loaded_count = 0,
+  preloader           = document.getElementById('page-preloader'),
+  perc_display        = document.getElementById('load-perc');
 
 for( var i = 0; i < images_total_count; i++)
 {
@@ -15,15 +15,15 @@ for( var i = 0; i < images_total_count; i++)
 
 function image_loaded(){
   images_loaded_count++;
-  perc_display.innerHTML = (( (100 / images_total_count) * images_loaded_count ) <<0) + '%';
+  perc_display.innerHTML = ( ((100 / images_total_count) * images_loaded_count ) << 0) + '%';
 
   if( images_loaded_count >= images_total_count )
   {
-      setTimeout( function() {
-        if( !preloader.classList.contains('done') )
-        {
-          preloader.classList.add('done');
-        }
-      }, 2000);
-    }
+    setTimeout( function() {
+      if( !preloader.classList.contains('done') )
+      {
+        preloader.classList.add('done');
+      }
+    }, 1000);
+  }
 }
